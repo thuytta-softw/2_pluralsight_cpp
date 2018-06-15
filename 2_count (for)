@@ -1,0 +1,29 @@
+
+https://app.pluralsight.com/player?course=beautiful-cplusplus-stl-algorithms&author=kate-gregory&name=beautiful-cplusplus-stl-algorithms-m2&clip=4&mode=live
+
+#include <iostream>
+#include <vector> //vector
+#include <algorithm> //count
+
+using namespace std;
+
+int main()
+{
+	vector<int> v{ 2,7,1,6,2,2,4,0 };
+
+	//count how many entries have the target value = 2
+    int c = 0;
+    int const target = 2;
+
+      for (size_t i = 0; i < v.size(); i++) // size_t = unsigned integer types
+	    {
+        if (v[i] == target)
+        {
+          c++;
+        }
+      }
+
+    cout << c << endl;
+
+    return 0;
+}
