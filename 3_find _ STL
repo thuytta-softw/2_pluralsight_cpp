@@ -1,0 +1,28 @@
+
+https://www.geeksforgeeks.org/stdfind-in-c/
+
+//#include<bits/stdc++.h>
+
+#include <iostream>
+#include <algorithm> // find
+#include <vector>  // vector
+
+ using namespace std;
+
+ int main() {
+ int t[] = { 10, 5, 9, 6, 2, 4, 7, 8, 3, 1 };
+ vector<int> v(t+0, t + 10);
+
+ int ser = 6;
+ //std::vector<int>::iterator it; = auto it;
+  auto it = find (v.begin(), v.end(), ser);
+  
+    if (it != v.end())
+    {
+        cout << "Element " << ser <<" found at position : " ;
+        cout << it - v.begin() + 1 << "\n" ;
+    }
+
+ return 0;
+ }
+
