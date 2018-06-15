@@ -15,7 +15,7 @@ int main()
     int c = 0;
     int const target = 2;
 
-    c = count(v.begin(), v.end(), target);
+    c = count(v.begin(), v.end(), target); //    the same c = count(begin(v), end(v), target);
 
     cout << c << endl;
 
