@@ -1,0 +1,33 @@
+
+https://app.pluralsight.com/player?course=beautiful-cplusplus-stl-algorithms&author=kate-gregory&name=beautiful-cplusplus-stl-algorithms-m2&clip=4&mode=live
+
+#include <iostream>
+#include <vector> //vector
+#include <algorithm> //count
+
+using namespace std;
+
+int main()
+{
+	vector<int> v{ 2,7,1,6,2,2,4,0 };
+
+	//count how many entries are odds 
+  
+  int odds = 0;
+
+    for (auto elem : v)
+    {
+      if (elem % 2 == 0)
+      {
+        odds++;
+      }
+    }
+
+    cout<<odds<<endl;
+
+    odds = count_if(begin(v), end(v), [](auto elem){ return elem % 2 !=0;}); // if lambde return true -> odds ++, if lambda return false -> do nothing
+    
+    cout<<odds<<endl;
+
+    return 0;
+}
