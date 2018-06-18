@@ -1,0 +1,35 @@
+
+//count how many entries have the target value = 2
+
+
+https://app.pluralsight.com/player?course=beautiful-cplusplus-stl-algorithms&author=kate-gregory&name=beautiful-cplusplus-stl-algorithms-m2&clip=5&mode=live
+
+#include <iostream>
+#include <vector> //vector
+#include <algorithm> //count
+
+using namespace std;
+
+int main()
+{
+	vector<int> v{ 2,7,1,6,2,2,4,0 };
+	
+    int odds = 0;
+
+    odds = count_if(v.begin(), v.end(), [](auto elem){return elem % 2 != 0;}); 
+
+    cout << odds << endl;
+    
+    bool allof, noneof, anyof;
+    
+    allof = (odds == v.size()); // all of the value are odd
+    noneof = (odds = 0); // none of odds in the collection
+    anyof = (odds > 0); // ther are some odds in the collection
+    
+    allof = all_of(begin(v), end(v), [](auto elem){return elem % 2 != 0;});
+    noneof = none_of(begin(v), end(v), [](auto elem){return elem % 2 != 0;});
+    anyof = any_of(begin(v), end(v), [](auto elem){return elem % 2 != 0;});
+    
+
+    return 0;
+}
