@@ -1,0 +1,37 @@
+
+//find how many entries are target 
+
+/*
+File Name: pluralsight.com (website) 
+Author: 
+Email Address: thuytta_softw@gmail.com 
+Assignment Number: 
+Description: learning at pluralsight.com 
+Start date: June 2018
+Last Changed: June 2018
+*/
+
+https://app.pluralsight.com/player?course=beautiful-cplusplus-stl-algorithms&author=kate-gregory&name=beautiful-cplusplus-stl-algorithms-m2&clip=4&mode=live
+	
+#include <iostream>
+#include <vector> //vector
+#include <algorithm> //count
+
+using namespace std;
+
+int main()
+{
+	vector<int> vec{ 2,7,0,1,6,2,2,4,0 };
+ 
+ int target = 0;
+ 
+ //find the first target = 0 in the colection
+ auto result = find(begin(vec), end(vec), target);
+ int welookedfor = *result;
+ 
+ 
+   
+   
+
+    return 0;
+}
