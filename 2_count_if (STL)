@@ -1,7 +1,17 @@
 
-https://app.pluralsight.com/player?course=beautiful-cplusplus-stl-algorithms&author=kate-gregory&name=beautiful-cplusplus-stl-algorithms-m2&clip=4&mode=live
-
 //count how many entries are odds 
+
+/*
+File Name: pluralsight.com (website) 
+Author: 
+Email Address: thuytta_softw@gmail.com 
+Assignment Number: 
+Description: learning at pluralsight.com 
+Start date: June 2018
+Last Changed: June 2018
+*/
+
+https://app.pluralsight.com/player?course=beautiful-cplusplus-stl-algorithms&author=kate-gregory&name=beautiful-cplusplus-stl-algorithms-m2&clip=4&mode=live
 	
 #include <iostream>
 #include <vector> //vector
@@ -12,12 +22,11 @@ using namespace std;
 int main()
 {
 	vector<int> v{ 2,7,1,6,2,2,4,0 };
-
-
-  
-  int odds = 0;
-
-    for (auto elem : v)
+ 
+   int odds = 0;
+    
+    // use for to count
+    for (auto elem : v) // = [](auto elem)[]
     {
       if (elem % 2 == 0)
       {
@@ -27,7 +36,7 @@ int main()
 
     cout<<odds<<endl;
 
-     // if lambda return true -> odds ++, if lambda return false -> do nothing
+     // use count_if (STL) to count. if lambda []()[] return true -> odds ++, if lambda return false -> do nothing
     odds = count_if(begin(v), end(v), [](auto elem){ return elem % 2 !=0;}); 
     
     cout<<odds<<endl;
