@@ -30,6 +30,9 @@ int main()
     noneof = none_of(begin(v), end(v), [](auto elem){return elem % 2 != 0;});
     anyof = any_of(begin(v), end(v), [](auto elem){return elem % 2 != 0;});
     
+    cout << allof << endl;
+    cout << noneof << endl;
+    cout << anyof << endl;
 
     return 0;
 }
