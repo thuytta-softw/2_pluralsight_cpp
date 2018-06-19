@@ -21,17 +21,17 @@ using namespace std;
 
 int main()
 {
-	vector<int> vec{ 2,7,0,1,6,2,2,4,0 };
- 
- int target = 0;
- 
- //find the first target = 0 in the colection
- auto result = find(begin(vec), end(vec), target);
- int welookedfor = *result;
- 
- 
-   
-   
+	
+    vector<int> vec{ 2,7,0,1,6,2,2,4,0 };
 
+    int target = 0;
+
+    //find the first target = 0 in the colection
+    auto result = find(begin(vec), end(vec), target);
+    int welookedfor = *result;
+
+    cout<<"result target = "<< *result<<endl;
+    cout<<"result target = "<< welookedfor<<endl;
+   
     return 0;
 }
