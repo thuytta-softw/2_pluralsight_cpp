@@ -1,2 +1,58 @@
+//Lambda basic 
+//https://www.youtube.com/watch?v=uk0Ytomv0wY&t=760s
+/*
+File Name: pluralsight.com (website)
+Author:
+Email Address: thuytta_softw@gmail.com
+Assignment Number:
+Description: lambda basic
+Start date: June 2018
+Last Changed: June 2018
+*/
 
-//
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  //Lambda basic 
+  auto sayHello = [](){
+		cout<<"Hello \n";
+    };
+	sayHello();
+
+	//lambda with parameter
+
+	int a = 3,b = 4; // we can't use any outside variable inside the body of lambda
+
+	auto plus_ = [](int a, int b) -> int { return a+b;}; // a,b outside different with a,b inside lambda
+
+	cout<<"a + b = "<<plus_(a,b)<<endl;
+
+
+	//we can pass the value of the ourside variable for inside the body of lambda
+    // capture by = -> auto pass_p = [=](int a, int b) {...}
+	int i = 10, j = 2;
+
+	auto pass_p = [i,j](int a, int b) -> int {
+
+            return a+b+i+j;
+            };
+
+	cout<<"a + b + i + j = "<<pass_p(a,b)<<endl;
+
+	//we can pass the reference of the ourside variable for inside the body of lambda
+    // capture by &-> auto pass_p = [&](int a, int b) {...}
+	int i = 10, j = 2;
+
+	auto pass_f = [&i,&j](int a, int b) -> int {
+
+            i = 20;
+            j = 40;
+            return a+b+i+j;
+            };
+
+	cout<<"a + b + i + j = "<<pass_f(a,b)<<endl;
+
+    return 0;
+}
